@@ -16,11 +16,11 @@ Le joueur incarne un jeune explorateur qui se promène en montgolfière pour par
 
 <tabs>
     <tab title="Banjo">
-        <img src="../images/banjo.jpeg" alt="Image 1" width="300" />
+        <img src="./images/banjo.jpeg" alt="Image 1" width="300" />
         <p>Banjo-Kazooie est un jeu de plateforme en 3D ou vous explorez des mondes pleins de défis, de secrets à découvrir et d'objets à collectionner pour avancer dans l'aventure.</p>
     </tab>
     <tab title="Mario">
-        <img src="../images/mario.jpeg" alt="Image 2" width="300" />
+        <img src="./images/mario.jpeg" alt="Image 2" width="300" />
         <p>Super Mario, c’est un jeu de plateforme où tu traverses des niveaux remplis d’obstacles, d’ennemis et de secrets à découvrir. Le gameplay est fluide, avec des sauts précis, des power-ups à utiliser au bon moment.</p>
     </tab>
 </tabs>
@@ -35,21 +35,21 @@ de continuer sa quête d'exploration.
 
 <tabs>
     <tab title="Plateforme">
-        <img src="../images/plateforming.png" alt="Image 1" width="300" />
+        <img src="./images/plateforming.png" alt="Image 1" width="300" />
         <p>Skyfall contient des séries de plateforme qui ont pour but de tester le joueur à son maximum comme des sauts de 
             plateform qui demande de la précision.</p>
     </tab>
     <tab title="Enigme">
-        <img src="enignme.png" alt="Image 2" width="300" />
+        <img src="./images/enignme.png" alt="Image 2" width="300" />
         <p>Des énigmes pour détendre l'atmosphère et toucher un autre sphère des jeux vidéos. Par exemple, allumer les torches
             pour faire apparaître le bois</p>
     </tab>
     <tab title="Ennemi">
-        <img src="../images/ennemis.png" alt="Image 2" width="300" />
+        <img src="./images/ennemis.png" alt="Image 2" width="300" />
         <p>Le joueur n'a pas d'attaque en temps que tel. Il doit esquiver les ennemies ce qui garde le joueur à vif</p>
     </tab>
     <tab title="Collection">
-        <img src="../images/bois.png" alt="Image 2" width="300" />
+        <img src="./images/bois.png" alt="Image 2" width="300" />
         <p>Dans Sky Fall, l'explorateur doit ramasser des lot de bois dans le but de repartir dans son ballon pour un autre niveau</p>
     </tab>
 </tabs>
