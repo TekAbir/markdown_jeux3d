@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Design - Sky Fall</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #80deea);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #00695c;
+        }
+
+        p, ul {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px #80cbc4;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #004d40;
+        }
+
+        .tabs button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: #004d40;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .tabs button:hover, .tabs button.active {
+            color: #00796b;
+            border-bottom: 2px solid #00796b;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* List */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #004d40;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #004d40;
+            color: #fff;
+        }
+
+        footer a {
+            color: #80deea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sky Fall</h1>
+        <img src="./images/A_low-poly_style_background_for_a_video_game._The_.jpg" alt="Sky Fall Background">
+
+        <h2>Qu'est-ce que c'est ?</h2>
+        <p>
+            Sky Fall est un jeu de plateforme, de collection, de puzzle et d'énigmes, inspiré de plusieurs jeux
+            qui tendent à disparaître avec la nouvelle vague de jeux vidéo.
+        </p>
+
+        <h2>Scénario</h2>
+        <p>
+            Le joueur incarne un jeune explorateur qui se promène en montgolfière pour parcourir le monde et découvrir ses richesses.
+            Cependant, il a mal calculé le bois dont il avait besoin et doit donc se poser pour trouver des lots de bois qui lui permettront de poursuivre son voyage.
+        </p>
+
+        <h2>Inspirations</h2>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="banjo">Banjo</button>
+            <button class="tab-button" data-tab="mario">Mario</button>
+        </div>
+        <div id="banjo" class="tab-content active">
+            <img src="./images/banjo.jpeg" alt="Banjo-Kazooie">
+            <p>
+                Banjo-Kazooie est un jeu de plateforme en 3D où vous explorez des mondes pleins de défis, de secrets à découvrir et d'objets à collectionner pour avancer dans l'aventure.
+            </p>
+        </div>
+        <div id="mario" class="tab-content">
+            <img src="./images/mario.jpeg" alt="Super Mario">
+            <p>
+                Super Mario, c’est un jeu de plateforme où tu traverses des niveaux remplis d’obstacles, d’ennemis et de secrets à découvrir.
+                Le gameplay est fluide, avec des sauts précis et des power-ups à utiliser au bon moment.
+            </p>
+        </div>
+
+        <h2>Objectifs du jeu</h2>
+        <p>
+            Le joueur doit trouver dans chaque niveau les lots de bois qui sont cachés derrière différents défis
+            dans le but de continuer sa quête d'exploration.
+        </p>
+
+        <h2>Mécaniques de jeux</h2>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="plateforme">Plateforme</button>
+            <button class="tab-button" data-tab="enigme">Enigme</button>
+            <button class="tab-button" data-tab="ennemi">Ennemi</button>
+            <button class="tab-button" data-tab="collection">Collection</button>
+        </div>
+        <div id="plateforme" class="tab-content active">
+            <img src="./images/plateforming.png" alt="Plateforme">
+            <p>
+                Skyfall contient des séries de plateforme qui ont pour but de tester le joueur à son maximum,
+                comme des sauts de plateformes qui demandent de la précision.
+            </p>
+        </div>
+        <div id="enigme" class="tab-content">
+            <img src="./images/enignme.png" alt="Enigme">
+            <p>
+                Des énigmes pour détendre l'atmosphère et toucher un autre sphère des jeux vidéos. Par exemple, allumer les torches
+                pour faire apparaître le bois.
+            </p>
+        </div>
+        <div id="ennemi" class="tab-content">
+            <img src="./images/ennemis.png" alt="Ennemis">
+            <p>
+                Le joueur n'a pas d'attaque en temps que tel. Il doit esquiver les ennemis, ce qui garde le joueur à vif.
+            </p>
+        </div>
+        <div id="collection" class="tab-content">
+            <img src="./images/bois.png" alt="Bois">
+            <p>
+                Dans Sky Fall, l'explorateur doit ramasser des lots de bois dans le but de repartir dans son ballon pour un autre niveau.
+            </p>
+        </div>
+
+        <h2>Ajouts possibles</h2>
+        <p>
+            Il est possible de rajouter beaucoup plus de mécaniques à ce jeu. Comme le joueur passe de niveau en niveau dans une montgolfière
+            et que son but est de découvrir le monde, les niveaux peuvent vraiment être très différents les uns des autres.
+        </p>
+        <p>
+            Par exemple, un niveau de glace pourrait introduire des mécaniques liées à la glisse, ou un niveau dans le désert, la jungle, une île perdue, etc.
+            Les possibilités sont presque infinies.
+        </p>
+
+        <h2>Graphisme</h2>
+        <p>
+            Le jeu est grandement inspiré du style "low poly" et des jeux sur les vieilles consoles comme la Nintendo 64.
+            On peut observer une forte influence de Banjo-Kazooie dans les couleurs, les formes angulaires des personnages et l'ambiance enfantine du jeu.
+        </p>
+        <ul>
+            <li>Cartoon</li>
+            <li>Enfantin</li>
+            <li>Joyeux</li>
+            <li>Low Poly</li>
+        </ul>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                contents.forEach(content => content.classList.remove('active'));
+
+                button.classList.add('active');
+                document.getElementById(button.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
